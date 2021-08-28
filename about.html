@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+
+    <title>Tentang Kami</title>
+  </head>
+  <body>
+    <!-- Background -->
+    <div class="banner">
+      <div class="blocks"></div>
+    </div>
+    <!-- NavBar -->
+    <nav>
+      <div class="wrap">
+        <div class="title">
+          <a href="index.html">
+            <p><b>A - 03 </b></p>
+          </a>
+        </div>
+        <div class="tblmenubox">
+          <div class="togel tblmenu"></div>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="tentangKami.html">Tentang Kami</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End NavBar -->
+    <div class="about">
+      <h1>Tentang Kami</h1>
+
+      <p>
+        A-03 adalah sebuah kelompok coding pada Bootcamp Progate x Universitas Negeri Surabaya. A-03 memiliki tugas membuat halaman web yang terdiri dari HTML, CSS yang responsif dan memiliki animasi. Maka dari itu kami membuat web ini
+        sebagai project dari tugas kami juga sebagai portfolio kami. Kami berharap dengan membuat web ini dapa menambah ilmu, pengalaman, serta relasi.
+      </p>
+    </div>
+    <footer>
+      <center>
+        <h1>A-03</h1>
+        <p>Copyright &copy; 2021 by A-03</p>
+      </center>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+      $(".togel.tblmenu").click(function () {
+        $(".menu").toggleClass("sh");
+      });
+    </script>
+    <script src="js/script1.js"></script>
+    <script src="js/vanilaTilt.js"></script>
+    <script src="js/scriptCanvas1.js"></script>
+  </body>
+</html>
