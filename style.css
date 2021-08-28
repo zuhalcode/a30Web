@@ -1,0 +1,772 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+
+/* Tentang Kami */
+.about {
+  width: 80%;
+  height: 50%;
+  color: white;
+  margin: 80px auto;
+}
+
+.about h1 {
+  margin-top: 120px;
+  font-size: 40pt;
+  text-align: center;
+}
+
+.about p {
+  margin: 30px;
+  text-align: justify;
+  font-size: 2em;
+}
+
+/* Background Style */
+
+.banner {
+  transform-style: preserve-3d;
+  perspective: 500px;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.banner .blocks {
+  position: relative;
+  display: block;
+  width: 5vw;
+  height: 5vh;
+  animation: blocks-up 2s ease-in-out forwards;
+}
+
+@keyframes blocks-up {
+  0% {
+    transform: translateZ(2000px);
+    background: url(img/bg2.jpg);
+    background-position: center;
+    background-size: 100vw;
+    box-shadow: 0 5 15 rgba(0, 0, 0, 0);
+    position: relative;
+    z-index: -9999;
+  }
+  100% {
+    position: relative;
+    z-index: -9999;
+    transform: translateZ(0px);
+    background: url(img/bg2.jpg);
+    background-position: center;
+    background-size: 100vw;
+    background-attachment: fixed;
+    box-shadow: 0 5 15 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Header Style */
+
+nav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+nav a:hover {
+  transition: 0.4s;
+  opacity: 1;
+  font-weight: 600;
+}
+nav {
+  background: linear-gradient(to right, #343e50, #0a1330);
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  /* opacity: 0.8; */
+}
+
+.title {
+  padding: 20px;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.5em;
+}
+
+.menu {
+  /* background: linear-gradient(to right, #343e50, #0a1330); */
+  margin-top: -20px;
+  opacity: 1;
+}
+
+.menu ul {
+  /* background: linear-gradient(to right, #343e50, #0a1330); */
+  position: relative;
+  top: 10px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.menu ul li {
+  display: inline-block;
+  /* background-color: green; */
+}
+
+.menu ul li a {
+  padding: 12px 20px;
+  margin-top: 10px;
+}
+
+.menu li:hover {
+  font-size: larger;
+}
+.wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.tblmenubox {
+  display: none;
+  float: right;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.tblmenu {
+  display: block;
+  margin-top: 30px;
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background: linear-gradient(to right, #4286f4, #373b44);
+  border-radius: 20%;
+  transition: 1s;
+  transform: translateY(-50%);
+}
+
+/* Card Style */
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  top: 7vw;
+}
+
+.container-content {
+  margin: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.8fr));
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: 100%;
+}
+
+.card,
+.card-container {
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.card {
+  border: none;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  height: 400px;
+}
+
+.card-container {
+  border: 5px double blue;
+}
+
+.Foto {
+  border: 5px double blue;
+  border-radius: 50%;
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* background-color: blue; */
+  /* animation: animate 0.3s infinite; */
+}
+/* .effect {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+
+/* .effect::after {
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background: linear-gradient(50deg, #5eff00, rgb(14, 207, 181));
+  opacity: 0;
+}
+.front:hover.effect::after {
+  filter: blur(50px);
+  opacity: 1;
+} */
+
+.front:hover span {
+  opacity: 1;
+}
+
+.front span {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  opacity: 0;
+}
+
+.front span::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 25px 0 0 25px;
+}
+
+.front:hover .span::after {
+  z-index: 1;
+}
+
+.front:hover {
+  animation: animate 0.3s infinite;
+}
+
+.card-container:hover {
+  transform: translateY(8px);
+}
+
+.front img {
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  text-align: center;
+  /* position: relative; */
+  /* z-index: 1; */
+  font-family: Lucida Handwriting;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  backface-visibility: hidden;
+  cursor: pointer;
+  color: rgb(22, 22, 22);
+  background: linear-gradient(100deg, #4dff03, rgb(0, 255, 221));
+}
+
+.back {
+  position: relative;
+  z-index: 2;
+}
+
+h5 {
+  font-size: 0.8em;
+  margin: 0px 10px 15px 10px;
+}
+
+h6 {
+  font-size: 0.6em;
+  margin-bottom: 12px;
+}
+
+.is-flipped {
+  transform: perspective(400px) rotateY(-180deg);
+}
+
+.front img,
+.back img {
+  margin: 10px auto;
+}
+
+.front img,
+.back img,
+.icon img {
+  width: 60%;
+  border-radius: 50%;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.icon img {
+  opacity: 0.8;
+  margin-bottom: -1px;
+}
+
+.icon img:hover {
+  opacity: 1;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+  font-size: 0.5em;
+  width: 100%;
+  opacity: 0.9;
+}
+
+footer h1 {
+  padding: 2px;
+  font-family: "Algerian";
+  font-weight: bold;
+}
+
+footer p {
+  margin-top: -10px;
+  padding: 15px;
+  font-weight: bold;
+}
+@media screen and (max-width: 1080px) {
+  .menu {
+    display: none;
+  }
+  .tblmenubox {
+    display: block;
+    visibility: visible;
+  }
+  .menu.sh {
+    display: block;
+    position: absolute;
+    top: 70px;
+    background: linear-gradient(to right, #343e50, #0a1330);
+    width: 100%;
+    left: 0;
+  }
+
+  .menu ul li {
+    display: block;
+    text-align: center;
+  }
+}
+/* width: 100%;
+height: 2vw;
+left: 0;
+right: 0;
+z-index: 99; */
+
+@media screen and (max-width: 768px) {
+  .container-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  * {
+    font-size: 20px;
+  }
+
+  b {
+    font-size: 1.7em;
+    margin-left: 15px;
+  }
+
+  .about {
+    color: white;
+  }
+
+  body {
+    background: url(img/bg2.jpg) no-repeat fixed center;
+  }
+
+  .container {
+    top: 7em;
+  }
+
+  .container-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  }
+
+  .card-container {
+    margin: 0px -10px;
+  }
+
+  .back h5 {
+    margin: 10px;
+  }
+
+  footer {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    bottom: -180px;
+  }
+
+  .banner .blocks {
+    display: none;
+  }
+
+  nav .menu {
+    margin-top: -15px;
+  }
+
+  .tblmenu {
+    top: 10px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background: linear-gradient(3.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  1% {
+    background: linear-gradient(7.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  2% {
+    background: linear-gradient(10.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  3% {
+    background: linear-gradient(14.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  4% {
+    background: linear-gradient(18deg, #4dff03, rgb(0, 255, 221));
+  }
+  5% {
+    background: linear-gradient(21.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  6% {
+    background: linear-gradient(25.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  7% {
+    background: linear-gradient(28.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  8% {
+    background: linear-gradient(32.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  9% {
+    background: linear-gradient(36deg, #4dff03, rgb(0, 255, 221));
+  }
+  10% {
+    background: linear-gradient(39.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  11% {
+    background: linear-gradient(43.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  12% {
+    background: linear-gradient(46.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  13% {
+    background: linear-gradient(50.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  14% {
+    background: linear-gradient(54deg, #4dff03, rgb(0, 255, 221));
+  }
+  15% {
+    background: linear-gradient(57.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  16% {
+    background: linear-gradient(61.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  17% {
+    background: linear-gradient(64.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  18% {
+    background: linear-gradient(68.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  19% {
+    background: linear-gradient(72deg, #4dff03, rgb(0, 255, 221));
+  }
+  20% {
+    background: linear-gradient(75.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  21% {
+    background: linear-gradient(79.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  22% {
+    background: linear-gradient(82.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  23% {
+    background: linear-gradient(86.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  24% {
+    background: -webkit-gradient(linear, left top, right top, from(white), to(black));
+    background: linear-gradient(90deg, #4dff03, rgb(0, 255, 221));
+  }
+  25% {
+    background: linear-gradient(93.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  26% {
+    background: linear-gradient(97.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  27% {
+    background: linear-gradient(100.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  28% {
+    background: linear-gradient(104.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  29% {
+    background: linear-gradient(108deg, #4dff03, rgb(0, 255, 221));
+  }
+  30% {
+    background: linear-gradient(111.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  31% {
+    background: linear-gradient(115.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  32% {
+    background: linear-gradient(118.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  33% {
+    background: linear-gradient(122.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  34% {
+    background: linear-gradient(126deg, #4dff03, rgb(0, 255, 221));
+  }
+  35% {
+    background: linear-gradient(129.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  36% {
+    background: linear-gradient(133.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  37% {
+    background: linear-gradient(136.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  38% {
+    background: linear-gradient(140.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  39% {
+    background: linear-gradient(144deg, #4dff03, rgb(0, 255, 221));
+  }
+  40% {
+    background: linear-gradient(147.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  41% {
+    background: linear-gradient(151.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  42% {
+    background: linear-gradient(154.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  43% {
+    background: linear-gradient(158.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  44% {
+    background: linear-gradient(162deg, #4dff03, rgb(0, 255, 221));
+  }
+  45% {
+    background: linear-gradient(165.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  46% {
+    background: linear-gradient(169.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  47% {
+    background: linear-gradient(172.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  48% {
+    background: linear-gradient(176.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  49% {
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: linear-gradient(180deg, #4dff03, rgb(0, 255, 221));
+  }
+  50% {
+    background: linear-gradient(183.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  51% {
+    background: linear-gradient(187.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  52% {
+    background: linear-gradient(190.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  53% {
+    background: linear-gradient(194.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  54% {
+    background: linear-gradient(198deg, #4dff03, rgb(0, 255, 221));
+  }
+  55% {
+    background: linear-gradient(201.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  56% {
+    background: linear-gradient(205.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  57% {
+    background: linear-gradient(208.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  58% {
+    background: linear-gradient(212.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  59% {
+    background: linear-gradient(216deg, #4dff03, rgb(0, 255, 221));
+  }
+  60% {
+    background: linear-gradient(219.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  61% {
+    background: linear-gradient(223.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  62% {
+    background: linear-gradient(226.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  63% {
+    background: linear-gradient(230.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  64% {
+    background: linear-gradient(234deg, #4dff03, rgb(0, 255, 221));
+  }
+  65% {
+    background: linear-gradient(237.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  66% {
+    background: linear-gradient(241.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  67% {
+    background: linear-gradient(244.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  68% {
+    background: linear-gradient(248.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  69% {
+    background: linear-gradient(252deg, #4dff03, rgb(0, 255, 221));
+  }
+  70% {
+    background: linear-gradient(255.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  71% {
+    background: linear-gradient(259.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  72% {
+    background: linear-gradient(262.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  73% {
+    background: linear-gradient(266.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  74% {
+    background: -webkit-gradient(linear, right top, left top, from(white), to(black));
+    background: linear-gradient(270deg, #4dff03, rgb(0, 255, 221));
+  }
+  75% {
+    background: linear-gradient(273.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  76% {
+    background: linear-gradient(277.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  77% {
+    background: linear-gradient(280.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  78% {
+    background: linear-gradient(284.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  79% {
+    background: linear-gradient(288deg, #4dff03, rgb(0, 255, 221));
+  }
+  80% {
+    background: linear-gradient(291.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  81% {
+    background: linear-gradient(295.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  82% {
+    background: linear-gradient(298.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  83% {
+    background: linear-gradient(302.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  84% {
+    background: linear-gradient(306deg, #4dff03, rgb(0, 255, 221));
+  }
+  85% {
+    background: linear-gradient(309.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  86% {
+    background: linear-gradient(313.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  87% {
+    background: linear-gradient(316.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  88% {
+    background: linear-gradient(320.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  89% {
+    background: linear-gradient(324deg, #4dff03, rgb(0, 255, 221));
+  }
+  90% {
+    background: linear-gradient(327.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  91% {
+    background: linear-gradient(331.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  92% {
+    background: linear-gradient(334.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  93% {
+    background: linear-gradient(338.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  94% {
+    background: linear-gradient(342deg, #4dff03, rgb(0, 255, 221));
+  }
+  95% {
+    background: linear-gradient(345.6deg, #4dff03, rgb(0, 255, 221));
+  }
+  96% {
+    background: linear-gradient(349.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  97% {
+    background: linear-gradient(352.8deg, #4dff03, rgb(0, 255, 221));
+  }
+  98% {
+    background: linear-gradient(356.4deg, #4dff03, rgb(0, 255, 221));
+  }
+  99% {
+    background: -webkit-gradient(linear, left bottom, left top, from(white), to(black));
+    background: linear-gradient(358.2deg, #4dff03, rgb(0, 255, 221));
+  }
+  100% {
+    background: -webkit-gradient(linear, left bottom, left top, from(white), to(black));
+    background: linear-gradient(360deg, #4dff03, rgb(0, 255, 221));
+  }
+}
